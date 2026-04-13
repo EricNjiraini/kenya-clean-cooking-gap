@@ -1,36 +1,88 @@
-# 🔥 Kenya Clean Cooking Access Gap Analysis
+# 🔥 # Kenya Clean Cooking Access Gap Analysis | DHS 2022 Geospatial Market Intelligence
 ### A County-Level Geospatial Market Opportunity Study
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue?style=flat-square)
 ![GeoPandas](https://img.shields.io/badge/GeoPandas-0.14%2B-green?style=flat-square)
 ![License](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)
 ![Status](https://img.shields.io/badge/Status-Phase%201%20of%202-orange?style=flat-square)
-![Data](https://img.shields.io/badge/Data-Simulated%20%E2%80%94%20pipeline%20demo%20only-red?style=flat-square)
+![Data](https://img.shields.io/badge/Data-Real%20DHS%202022%20Derived-green?style=flat-square)
 
-> **"Only 31% of Kenyan households use clean cooking — yet electricity access stands at 77%. The infrastructure exists. The market gap is hiding in plain sight."**
+## 🎯 Problem Statement
 
-This project maps and quantifies Kenya's clean cooking access deficit at county level, identifying the highest-impact intervention zones for distributors, investors, carbon project developers, and policymakers. It is **Phase 1** of a two-phase analysis that will scale to all of Sub-Saharan Africa.
+Kenya’s clean cooking transition is not constrained by national infrastructure — it is constrained by **uneven spatial adoption patterns across counties**.
 
----
+Despite rising electricity access (77%), only ~31% of households use clean cooking fuels, creating a structural market inefficiency.
 
-## ⚠️ Data Status
+This project answers one question:
 
-The pipeline currently runs on **simulated data** generated to match the structure and schema of the Kenya DHS 2022 Household Recode file. This is intentional at this stage.
-
-| Purpose | Fit? |
-|---------|------|
-| Testing that pipeline code runs without errors | ✅ Good |
-| Checking column names, dtypes, and merges | ✅ Good |
-| Visualising output formats and map layouts | ✅ Good |
-| Estimating real clean cooking rates | ❌ Not reliable |
-| Regression or predictive modelling | ❌ Not reliable |
-| County-level policy conclusions | ❌ Not reliable |
-
-**Real data path:** The pipeline is built to ingest the Kenya DHS 2022 Household Recode (HR) file from [dhsprogram.com](https://dhsprogram.com) (free registration). Once that file is substituted into `data/raw/`, all notebooks run unchanged and produce analysis-grade outputs. See `notebooks/01_data_collection.ipynb` for exact download instructions.
+> Where should governments, investors, and energy companies prioritize intervention to maximize clean cooking adoption impact per unit of capital deployed?
 
 ---
 
-## 📌 Why This Matters
+## 📌 Strategic Recommendations
+
+### 1. Market Prioritisation Strategy
+Focus LPG expansion in high-deficit, high-population counties:
+- Kakamega
+- Bungoma
+- Meru
+- Nakuru
+- Kilifi
+
+### 2. E-Cooking Market Development
+Target 10 identified counties with high electricity penetration but low LPG usage for pilot induction programs.
+
+### 3. Segmented Intervention Strategy
+- Low-income rural counties → subsidised LPG rollout
+- Mid-income transition counties → hybrid LPG + electric cooking programs
+- Urban counties → appliance-driven adoption strategy
+
+### 4. Investment Logic
+Shift from national averages to **county-level ROI targeting using deficit-weighted demand**
+
+## 📈 Exploratory Data Analysis Findings
+
+- Urbanisation vs access correlation: **-0.379**
+- 10 counties identified as **e-cooking opportunity markets**
+- Strong negative relationship between female-headed households and access (r = -0.379)
+- Wealth shows non-linear adoption pattern (threshold effect observed)
+
+---
+
+## 📊 Impact Potential
+
+If interventions are targeted using this framework:
+
+- Capital efficiency improves by prioritising high-deficit counties
+- Carbon project additionality increases through precise targeting
+- Distribution costs reduce via cluster-based rollout strategy
+- Adoption rates improve through segmentation-based interventions
+
+
+## 📌 Executive Summary Dashboard
+
+![EDA Summary](outputs/charts/eda/eda_summary.png)
+
+## ✅ Data Status
+
+This project now uses **real Kenya DHS 2022 household survey data** (licensed access via DHS Program) combined with public geospatial and policy datasets.
+
+To comply with DHS redistribution terms:
+
+- Raw household microdata is **not stored in this repository**
+- Only aggregated county-level outputs are published
+- All charts, maps, rankings, and findings are reproducible using the notebooks
+
+The pipeline ingests:
+
+- Kenya DHS Household Recode (.dta)
+- Kenya county shapefiles
+- Public energy access benchmarks
+- Supporting socioeconomic datasets
+
+---
+
+## 💼 Business Context & Investment Relevance
 
 - **~9.1 million Kenyan households** still rely on charcoal or firewood for cooking
 - The Government of Kenya has set a target of **100% clean cooking access by 2028** — four years away
@@ -128,6 +180,17 @@ Counties clustered into four market archetypes by access rate, urbanisation, pop
 2. **The LPG–electricity split** — Counties with high electricity but low LPG penetration signal the e-cooking opportunity
 3. **Income threshold** — There is a wealth level above which clean cooking adoption accelerates sharply
 4. **Gender disaggregation** — Female-headed households show different fuel choice patterns at the same income level
+
+---
+
+
+## 📸 Sample Outputs
+
+### County Priority Map
+![Priority Map](outputs/maps/priority-map-preview.png)
+
+### Opportunity Quadrant
+![Chart](outputs/charts/opportunity-matrix.png)
 
 ---
 

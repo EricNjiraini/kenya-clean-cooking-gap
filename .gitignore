@@ -14,11 +14,11 @@ data/shapefiles/
 !data/shapefiles/.gitkeep
 
 # ── Outputs ─────────────────────────────────────────────────────
-# Generated outputs are excluded — they are produced by running
-# the notebooks and are too large for routine commits.
-outputs/maps/
-outputs/charts/
-outputs/tables/
+# Keep published findings visible on GitHub
+# Only ignore temporary exports
+outputs/**/*.tmp
+outputs/**/*.log
+outputs/**/*.bak
 
 # Keep folder structure
 !outputs/maps/.gitkeep
