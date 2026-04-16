@@ -187,7 +187,7 @@ Counties clustered into four market archetypes by access rate, urbanisation, pop
 ## 📸 Sample Outputs
 
 ### County Priority Map
-![Priority Map](outputs/maps/priority_matrix.png)
+![Priority Map](outputs/maps/03_priority_map.png)
 
 ### Opportunity Quadrant
 ![Chart](outputs/charts/affordability_vs_distribution_gap.png)
