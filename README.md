@@ -42,10 +42,10 @@ Shift from national averages to **county-level ROI targeting using deficit-weigh
 
 ## 📈 Exploratory Data Analysis Findings
 
-- Urbanisation vs access correlation: **-0.379**
+- Urbanisation vs access correlation: **r = 0.724**. Urban counties generally have better access, but 8 relatively urban counties (Garissa, Kwale, Lamu, Mandera, Marsabit, Tana River, Turkana and Wajir) still have low access
 - 10 counties identified as **e-cooking opportunity markets**
-- Strong negative relationship between female-headed households and access (r = -0.379)
-- Wealth shows non-linear adoption pattern (threshold effect observed)
+- Moderate negative relationship between the share of female-headed households and access (r = -0.379)
+- Wealth is the strongest correlate of access (r = 0.878), with a non-linear, threshold-like adoption pattern
 
 ---
 
